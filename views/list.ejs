@@ -1,0 +1,29 @@
+<%- include("header"); -%>
+    <div class="box" id="heading">
+      <h1 class="list-title"><%= listTitle %></h1>
+    </div>
+
+  <div class="box">
+
+       <%  newListItems.forEach(function(item){ %>
+         <form action="/delete" method="post">
+           <div class="item">
+             <p class="list-items"><%= item.name %></p>
+             <button class="delete-item" type="submit" name="delete" value="<%= item._id %>"><i class="trash far fa-trash-alt"></i></button>
+           </div>
+           <input type="hidden" name="DateToDeleteFrom" value="<%= listTitle %>"/>
+         </form>
+      <% }); %>
+<!-- make trash buttons clickable, remove item on click -->
+<!-- change checkboxes - custom style -->
+
+    <form action="/add" method="post">
+      <input type="text" name="newItem" placeholder="Add New Item" autocomplete="off" autofocus>
+      <button class="add-item" type="submit" name="getDayToAddItemTo" value="<%= listTitle %>"><i class="fas fa-plus"></i></button>
+    </form>
+
+
+  </div>
+
+
+<%- include("footer"); -%>

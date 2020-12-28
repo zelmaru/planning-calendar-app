@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo Planner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <div class="topnav" id="myTopnav">
+      <a class="blue-menu box" href="/">Home</a>
+      <div class="dropdown">
+        <!-- // cursor pointer only when clicking directly on text because a tag is inside btn:  -->
+        <button class="dropbtn box">Pick Day
+          <i class="fa fa-caret-down"></i>
+        </button>
+
+        <!-- create new dropdown item for each list in db -->
+        <div class="dropdown-content">
+          <form class="date-content dropdown-content" action="/" method="post">
+            <input type="date" id="start" name="datepicker" placeholder="Tap the icon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#xf073;" style="font-family: 'Montserrat', 'Font Awesome 5 Free'" onchange='this.form.submit()'>
+          </form>
+        </div>
+
+      </div>
+      <a class="blue-menu box" href="/about">About</a>
+      <a class="blue-menu box" href="/contact">Contact</a>
+    </div>
+    <header>
+      <h3>Always remember what ToDo.</h3>
+    </header>
